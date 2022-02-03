@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Counter from './Components/Counter';
+import Card from "./Components/Card";
+import Header from "./Components/Header";
 
 function App() {
+  const OSarr = ["Android", "Blackberry", "iPhone", "Windows Phone"];
+  const manufArr = ["Samsanug", "HTC", "Micromax", "Apple"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      <div className="App">
+      <Counter/>
+      </div>
+
+      <div style={{margin:"30px 650px"}}>
+      <Header title="Mobile Operating System" />
+      <Card arr={OSarr} />
+
+      <Header title="Mobile Manufacturers" />
+      <Card arr={manufArr} />
     </div>
+    </>
+
   );
 }
 
